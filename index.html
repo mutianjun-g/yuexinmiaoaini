@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>月薪喵 · 满屏都是你</title>
+<meta name="description" content="一群小猫先拼成一颗心，然后把整个屏幕铺满。">
+<meta name="theme-color" content="#0a0a0c">
+<meta property="og:title" content="月薪喵 · 满屏都是你">
+<meta property="og:description" content="一群小猫先拼成一颗心，然后把整个屏幕铺满。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='26'%3E%F0%9F%90%B1%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="stage"></canvas>
+<div class="vignette" aria-hidden="true"></div>
+
+<header class="brand">
+  <span class="brand-dot"></span>
+  <span>月薪喵</span>
+</header>
+
+<p class="caption">我真的特别爱你</p>
+
+<div class="controls">
+  <button class="icon-btn small" id="replayBtn" type="button" aria-label="重播">
+    <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 12a8 8 0 1 1-2.4-5.7"/><path d="M20 4.5V10h-5.5"/>
+    </svg>
+  </button>
+
+  <button class="icon-btn" id="muteBtn" type="button" aria-label="静音">
+    <svg class="ic-on" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 9v6h3.5L13 19V5L7.5 9H4z"/><path d="M17 9.5a3.5 3.5 0 0 1 0 5"/><path d="M19.5 7a7 7 0 0 1 0 10"/>
+    </svg>
+    <svg class="ic-off" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" hidden>
+      <path d="M4 9v6h3.5L13 19V5L7.5 9H4z"/><path d="M17 9.5l4 5"/><path d="M21 9.5l-4 5"/>
+    </svg>
+  </button>
+</div>
+
+<div class="veil" id="veil" role="button" tabindex="0" aria-label="点击开始">
+  <div class="veil-inner">
+    <div class="orb">
+      <svg viewBox="0 0 24 24" width="30" height="30" fill="#ff9ab4">
+        <path d="M12 20.4s-7.6-4.6-7.6-9.6A4.4 4.4 0 0 1 12 7.7a4.4 4.4 0 0 1 7.6 3.1c0 5-7.6 9.6-7.6 9.6z"/>
+      </svg>
+    </div>
+    <p class="veil-title">我真的特别爱你</p>
+    <p class="veil-sub" id="veilSub">正在准备小猫…</p>
+  </div>
+</div>
+
+<audio id="audio" src="assets/music.mp3" preload="auto" loop></audio>
+<script src="app.js"></script>
+</body>
+</html>
